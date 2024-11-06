@@ -1,9 +1,16 @@
 # DL_FileOutput_for_Blender
 This free addon creates a File Output node inside Blender and sets the AOV names automatically.
 
-<h1>File Output</h1>
+![testing_buttons_v002_](https://github.com/user-attachments/assets/d0f29eda-88e3-4019-b3a6-80ce79578643)
 
 
+There are two buttons:
+
+- **AOV Standard Setup**: uses the enabled passes from the Render Layer node;
+- **AOV Compact Setup**: Uses the enabled passes from the Render Layer node along with the default light passes;
+
+> [!IMPORTANT]
+> _For now this addon was designed to work with Cycles and Eevee engines only._
 
 <h1>Nuke AOV Templates ☢️</h1>
 
