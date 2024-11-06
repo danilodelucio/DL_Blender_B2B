@@ -1,5 +1,5 @@
 # DL_FileOutput_for_Blender
-This free addon creates a File Output node inside Blender and sets the AOV names automatically.
+This free addon creates a File Output node inside Blender and sets the AOV names (render passes), automatically.
 
 ![testing_buttons_v002_](https://github.com/user-attachments/assets/d0f29eda-88e3-4019-b3a6-80ce79578643)
 
@@ -12,7 +12,8 @@ There are two buttons:
 > [!IMPORTANT]
 > _For now this addon was designed to work with Cycles and Eevee engines only._
 
-<h1>Nuke AOV Templates ☢️</h1>
+
+<br><h1>Nuke AOV Templates ☢️</h1>
 
 ![Screenshot 2024-11-06 153242](https://github.com/user-attachments/assets/341dfd62-a290-4cd4-89a1-d7aab073c42e)
 
@@ -31,17 +32,17 @@ Once you download it, you can drag and drop the Nuke files into your Nuke.
 <br>![DragAndDrop_templates_v001_](https://github.com/user-attachments/assets/bbcfd655-84cc-463d-a03b-ca0a740ca1f0)
 
 
-<br> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
-
+> [!TIP]
+> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
 
 ![image](https://github.com/user-attachments/assets/03fd757e-b595-437d-b8b1-3ae285d7b409)
 
 
 > _These Nuke setups use Stamps. You don't need to have it installed, but if you want to, you can download it [here](https://www.nukepedia.com/gizmos/other/stamps)._
 
----
 
-<h1>Installing ⚙️</h1>
+
+<br><h1>Installing ⚙️</h1>
 
 Click on the green button and download the zip file.
 
@@ -57,9 +58,9 @@ Now you should see the Addon in the Compositor editor.
 ![Screenshot 2024-11-06 183122](https://github.com/user-attachments/assets/b31311f9-b184-4ccb-9371-23c387245147)
 
 
----
 
-<h1>Support me! 🥺</h1>
+
+<br><h1>Support me! 🥺</h1>
 
 ![image](https://github.com/user-attachments/assets/1268bd3e-07cd-40a0-980a-3543e4e35e78)
 
