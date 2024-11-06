@@ -1,5 +1,5 @@
 # DL_FileOutput_for_Blender
-This free addon creates a File Output node and sets the AOV names automatically.
+This free addon creates a File Output node inside Blender and sets the AOV names automatically.
 
 <h1>File Output</h1>
 
@@ -16,7 +16,7 @@ It includes Nuke AOV templates, which are custom setups for rebuilding the rende
 - Blender_AOVs_BacktoBeauty_Standard_Eevee_v1;
 - Blender_AOVs_BacktoBeauty_Compact_Eevee_v1;
 
-> <I>They were made by following the original [Blender documentation](https://docs.blender.org/manual/en/3.2/render/layers/passes.html).</i>
+> _They were made by following the original [Blender documentation](https://docs.blender.org/manual/en/3.2/render/layers/passes.html)._
 
 <br>
 Once you download it, you can drag and drop the Nuke files into your Nuke. 
@@ -26,6 +26,26 @@ Once you download it, you can drag and drop the Nuke files into your Nuke.
 <br> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
 
 ![image](https://github.com/user-attachments/assets/03fd757e-b595-437d-b8b1-3ae285d7b409)
+
+
+> _These Nuke setups use Stamps. You don't need to have it installed, but if you want to, you can download it [here](https://www.nukepedia.com/gizmos/other/stamps)._
+
+---
+
+<h1>Installing ⚙️</h1>
+
+Click on the green button and download the zip file.
+
+![Screenshot 2024-11-06 175507](https://github.com/user-attachments/assets/1421eaa6-baac-4494-b2a9-38c41dcbc8aa)
+
+Once you have downloaded and extracted the files, open Blender and go to **Edit** -> **Preferences** -> **Addons** -> then click on the **Install** button.
+Locate the **DL_FileOutput.py** file and check the box to enable the Add-on.
+
+![Screenshot 2024-11-06 182751](https://github.com/user-attachments/assets/1490a9ee-b6f3-4f50-a7f6-812d8f266067)
+
+Now you should see the Addon in the Compositor editor.
+
+![Screenshot 2024-11-06 183122](https://github.com/user-attachments/assets/b31311f9-b184-4ccb-9371-23c387245147)
 
 
 ---
