@@ -11,9 +11,22 @@ This free addon creates a File Output node and sets the AOV names automatically.
 
 It includes Nuke AOV templates, which are custom setups for rebuilding the render passes within Nuke.
 
-They were made by following the original [Blender documentation](https://docs.blender.org/manual/en/3.2/render/layers/passes.html).
+- Blender_AOVs_BacktoBeauty_Standard_Cycles_v1;
+- Blender_AOVs_BacktoBeauty_Compact_Cycles_v1;
+- Blender_AOVs_BacktoBeauty_Standard_Eevee_v1;
+- Blender_AOVs_BacktoBeauty_Compact_Eevee_v1;
 
-Once you download it, you can drag and drop the Nuke files into your Nuke. Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
+> <I>They were made by following the original [Blender documentation](https://docs.blender.org/manual/en/3.2/render/layers/passes.html).</i>
+
+<br>
+Once you download it, you can drag and drop the Nuke files into your Nuke. 
+
+
+
+<br> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
+
+![image](https://github.com/user-attachments/assets/03fd757e-b595-437d-b8b1-3ae285d7b409)
+
 
 ---
 
