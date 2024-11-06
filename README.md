@@ -28,7 +28,7 @@ For example:
 
 ![Screenshot 2024-11-06 153242](https://github.com/user-attachments/assets/341dfd62-a290-4cd4-89a1-d7aab073c42e)
 
-It includes Nuke AOV templates, which are custom setups for rebuilding the render passes within Nuke.
+It includes Nuke AOV templates, which are custom setups for rebuilding the render passes within Nuke (also known as **Back to Beauty**).
 
 - Blender_AOVs_BacktoBeauty_Standard_Cycles_v1;
 - Blender_AOVs_BacktoBeauty_Compact_Cycles_v1;
