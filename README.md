@@ -21,9 +21,11 @@ It includes Nuke AOV templates, which are custom setups for rebuilding the rende
 <br>
 Once you download it, you can drag and drop the Nuke files into your Nuke. 
 
+<br>![DragAndDrop_templates_v001_](https://github.com/user-attachments/assets/bbcfd655-84cc-463d-a03b-ca0a740ca1f0)
 
 
 <br> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
+
 
 ![image](https://github.com/user-attachments/assets/03fd757e-b595-437d-b8b1-3ae285d7b409)
 
