@@ -1,6 +1,8 @@
 # DL_FileOutput_for_Blender
 This free addon creates a File Output node inside Blender and sets the AOV names (render passes), automatically.
 
+It was developed and tested in **Blender 4.1.0**.
+
 ![testing_buttons_v002_](https://github.com/user-attachments/assets/d0f29eda-88e3-4019-b3a6-80ce79578643)
 
 
@@ -9,8 +11,17 @@ There are two buttons:
 - **AOV Standard Setup**: uses the enabled passes from the Render Layer node;
 - **AOV Compact Setup**: Uses the enabled passes from the Render Layer node along with the default light passes;
 
+In summary, the Compact setup provides a straightforward AOV combination directly inside Blender, so you will get the final result for some render passes.
+
+For example:
+- **Diffuse Light** = Diffuse Direct + Diffuse Indirect;
+- **Diffuse Albedo** = which is the original Diffuse Color;
+- **Reflection** = Glossy Color x (Glossy Direct + Glossy Indirect);
+- **Refraction** = Transmission Color x (Transmission Direct + Transmission Indirect);
+- **Volume** = Volume Direct + Volume Indirect;
+
 > [!IMPORTANT]
-> _For now this addon was designed to work with Cycles and Eevee engines only._
+> _For now, this add-on has been designed to work only with Cycles and Eevee engines._
 
 
 <br><h1>Nuke AOV Templates ☢️</h1>
@@ -58,7 +69,13 @@ Now you should see the Addon in the Compositor editor.
 ![Screenshot 2024-11-06 183122](https://github.com/user-attachments/assets/b31311f9-b184-4ccb-9371-23c387245147)
 
 
+<br><h1>Troubleshooting 🛠️</h1>
 
+<br>
+
+If you have feedback, suggestions, or feature requests, please visit the [Discussions](https://github.com/danilodelucio/DL_FileOutput_for_Blender/discussions) page and create a **New Discussion**.<br>
+For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutput_for_Blender/issues) page and create a **New Issue**.
+<br>
 
 <br><h1>Support me! 🥺</h1>
 
