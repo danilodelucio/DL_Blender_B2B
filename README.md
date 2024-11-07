@@ -24,7 +24,7 @@ For example:
 > _For now, this add-on has been designed to work only with Cycles and Eevee engines._
 
 
-<br><h1>Nuke AOV Templates ☢️</h1>
+<br><h1>Nuke Back to Beauty Templates ☢️</h1>
 
 ![Screenshot 2024-11-06 153242](https://github.com/user-attachments/assets/341dfd62-a290-4cd4-89a1-d7aab073c42e)
 
