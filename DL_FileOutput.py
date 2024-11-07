@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------------
 #  DL_FileOutput [Blender]
-#  Version: v01.0
+#  Version: v01.1
 #  Author: Danilo de Lucio
 #  Website: www.danilodelucio.com
 #  Created Date: 31/Oct/2024
-#  Last update: 05/Nov/2024
+#  Last update: 07/Nov/2024
 # -----------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------
@@ -16,7 +16,7 @@
 bl_info = {
     "name": "DL_FileOutput",
     "author": "Danilo de Lucio",
-    "version": (1, 0),
+    "version": (1, 1),
     "blender": (4, 1, 0),
     "location": "Compositor > DL FileOutput",
     "description": "Creates an Output File node and sets all the AOV names automatically.",
@@ -49,15 +49,12 @@ class DL_FileOutput:
         # Selected Render Layer node
         self.selected_RenderLayer_node = bpy.context.scene.node_tree.nodes.active
 
-        if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        if self.check():
             print(f"\nRunning {TOOL_NAME} setup...")
             print("- Render engine: ", scene.render.engine)
 
             self.renderLayer_location = self.selected_RenderLayer_node.location
-        
-        else:
-            self.error_msg()
-            return
 
     def enable_passes(self) -> None:
         current_viewLayer = bpy.context.view_layer
@@ -127,20 +124,19 @@ class DL_FileOutput:
         return output_file_node
 
     def aov_standard(self):
-        if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        if self.check():
             output_file_node = self.create_FileOutput_node(700, 0)
             self.create_slots_OutputFile(output_file_node, self.final_passes())
 
             self.clear_selection()
-        
-        else:
-            self.error_msg()
             
-        print("- AOV Standard Setup has been completed!")
-        return
+            print("- AOV Standard Setup has been completed!")
+            return True
 
     def aov_compact(self):
-        if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
+        if self.check():
             self.enable_passes()
 
             # Creating File Output node
@@ -196,12 +192,9 @@ class DL_FileOutput:
                 self.link_nodes(self.renderLayer_output("VolumeDir"), output_file_node.inputs["volume"])
 
             self.clear_selection()
-        
-        else:
-            self.error_msg()
 
-        print("- AOV Compact Setup has been completed!")
-        return
+            print("- AOV Compact Setup has been completed!")
+            return True
 
     def create_colorMix_node(self, label, x, y, operation):
         mix_node = self.nodes.new(type='CompositorNodeMixRGB')
@@ -330,13 +323,40 @@ class DL_FileOutput:
 
     def report(self, type, message):
         def draw(self, context):
-            self.layout.label(text=message)
+            lines = message.split('\n')
+            for line in lines:
+                self.layout.label(text=line)
+            # self.layout.label(text=message)
         bpy.context.window_manager.popup_menu(draw, title="Info", icon='INFO')
 
-    def error_msg(self):
-        error_msg = "Please select the Render Layer node first!"
-        print("[INFO] " + error_msg)
-        self.report({'INFO'}, error_msg)
+    def error_msg(self, msg):
+        print("[INFO] " + msg)
+        self.report({'INFO'}, msg)
+
+    def check(self):
+        current_view_layer_scene = bpy.context.view_layer.name
+        # selected_RenderLayer_node = bpy.context.scene.node_tree.nodes.active
+        
+        # Checking if the Render Layer node is selected
+        if not self.selected_RenderLayer_node or self.selected_RenderLayer_node.type != 'R_LAYERS':
+            self.error_msg("Please select a Render Layer node first!")
+            return False
+        
+        # Checking if the current View Layer is the same as the selected Render Layer node
+        current_view_layer_node = self.selected_RenderLayer_node.layer
+
+        if current_view_layer_node != current_view_layer_scene:
+            self.error_msg(f"""
+The View Layer from the selected Render Layer node is different to the current View Layer.
+
+- Current View Layer: {current_view_layer_scene}.
+- Current View Layer from the selected Render Layer node: {current_view_layer_node}.
+""")
+            return False
+        
+        else:
+            return True
+
 
 # Operators
 class AOVStandardOperator(bpy.types.Operator):
@@ -407,3 +427,5 @@ def unregister():
 
 if __name__ == "__main__":
     register()
+
+register()
