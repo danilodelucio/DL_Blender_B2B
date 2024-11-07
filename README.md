@@ -3,7 +3,7 @@ This free addon creates a File Output node inside Blender and sets the AOV names
 
 It was developed and tested in **Blender 4.1.0**.
 
-![testing_buttons_v002_](https://github.com/user-attachments/assets/d0f29eda-88e3-4019-b3a6-80ce79578643)
+![testing_buttons_v003_](https://github.com/user-attachments/assets/4f3d9781-2a4e-4a1d-9c4a-bff0bf65115e)
 
 
 There are two buttons:
