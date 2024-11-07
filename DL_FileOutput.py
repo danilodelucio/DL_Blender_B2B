@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------------
 #  DL_FileOutput [Blender]
-#  Version: v01.1
+#  Version: v01.2
 #  Author: Danilo de Lucio
 #  Website: www.danilodelucio.com
 #  Created Date: 31/Oct/2024
@@ -16,7 +16,7 @@
 bl_info = {
     "name": "DL_FileOutput",
     "author": "Danilo de Lucio",
-    "version": (1, 1),
+    "version": (1, 2),
     "blender": (4, 1, 0),
     "location": "Compositor > DL FileOutput",
     "description": "Creates an Output File node and sets all the AOV names automatically.",
@@ -49,7 +49,6 @@ class DL_FileOutput:
         # Selected Render Layer node
         self.selected_RenderLayer_node = bpy.context.scene.node_tree.nodes.active
 
-        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
         if self.check():
             print(f"\nRunning {TOOL_NAME} setup...")
             print("- Render engine: ", scene.render.engine)
@@ -113,8 +112,7 @@ class DL_FileOutput:
 
         # Setting all the main info
         output_file_node.name = TOOL_NAME
-        output_file_node.label = TOOL_NAME
-
+        output_file_node.width = 300
         output_file_node.format.file_format = 'OPEN_EXR_MULTILAYER'
         output_file_node.use_custom_color = True
         output_file_node.color = (0.227267, 0.0768554, 0.116828)
@@ -124,9 +122,9 @@ class DL_FileOutput:
         return output_file_node
 
     def aov_standard(self):
-        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
         if self.check():
             output_file_node = self.create_FileOutput_node(700, 0)
+            output_file_node.label = TOOL_NAME + " - AOV Standard Setup"
             self.create_slots_OutputFile(output_file_node, self.final_passes())
 
             self.clear_selection()
@@ -135,12 +133,12 @@ class DL_FileOutput:
             return True
 
     def aov_compact(self):
-        # if self.selected_RenderLayer_node and self.selected_RenderLayer_node.type == 'R_LAYERS':
         if self.check():
             self.enable_passes()
 
             # Creating File Output node
             output_file_node = self.create_FileOutput_node(1100, 0)
+            output_file_node.label = TOOL_NAME + " - AOV Compact Setup"
             self.create_slots_OutputFile(output_file_node, self.combined_passes())
 
             # CYCLES
@@ -326,7 +324,6 @@ class DL_FileOutput:
             lines = message.split('\n')
             for line in lines:
                 self.layout.label(text=line)
-            # self.layout.label(text=message)
         bpy.context.window_manager.popup_menu(draw, title="Info", icon='INFO')
 
     def error_msg(self, msg):
@@ -335,7 +332,6 @@ class DL_FileOutput:
 
     def check(self):
         current_view_layer_scene = bpy.context.view_layer.name
-        # selected_RenderLayer_node = bpy.context.scene.node_tree.nodes.active
         
         # Checking if the Render Layer node is selected
         if not self.selected_RenderLayer_node or self.selected_RenderLayer_node.type != 'R_LAYERS':
@@ -427,5 +423,3 @@ def unregister():
 
 if __name__ == "__main__":
     register()
-
-register()
