@@ -24,9 +24,7 @@ For example:
 > _For now, this add-on has been designed to work only with Cycles and Eevee engines._
 
 
-<br><h1>Nuke Back to Beauty Templates ☢️</h1>
-
-![Screenshot 2024-11-06 153242](https://github.com/user-attachments/assets/341dfd62-a290-4cd4-89a1-d7aab073c42e)
+<br><h1>Back to Beauty Templates for Nuke/Fusion ☢️</h1>
 
 It includes Nuke AOV templates, which are custom setups for rebuilding the render passes within Nuke (also known as **Back to Beauty**).
 
@@ -37,14 +35,17 @@ It includes Nuke AOV templates, which are custom setups for rebuilding the rende
 
 > _They were made by following the original [Blender documentation](https://docs.blender.org/manual/en/3.2/render/layers/passes.html)._
 
-<br>
-Once you download it, you can drag and drop the Nuke files into your Nuke. 
+![Screenshot 2024-11-06 153242](https://github.com/user-attachments/assets/341dfd62-a290-4cd4-89a1-d7aab073c42e)
+![Screenshot 2024-11-18 175012](https://github.com/user-attachments/assets/2d5da5fb-774d-4699-a9bb-13e606eebd95)
 
-<br>![DragAndDrop_templates_v001_](https://github.com/user-attachments/assets/bbcfd655-84cc-463d-a03b-ca0a740ca1f0)
+<br>
+Once you download it, you can drag and drop the .nk/.setting files into your Nuke/Fusion. 
+
+<br>![DragAndDrop_templates_v003_](https://github.com/user-attachments/assets/de296ec1-3c2a-42fb-bd1e-517253bbdf00)
 
 
 > [!TIP]
-> Alternatively, click one of these setups (located in the Nuke folder here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke.
+> Alternatively, click one of these setups (here on this GitHub page), then click "copy raw file" on the right side of the screen and paste it into your Nuke/Fusion.
 
 ![image](https://github.com/user-attachments/assets/03fd757e-b595-437d-b8b1-3ae285d7b409)
 
