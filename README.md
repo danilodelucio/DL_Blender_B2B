@@ -1,4 +1,4 @@
-![cover_v002](https://github.com/user-attachments/assets/50e5d971-9840-4395-8af6-5523221aa27a)
+![cover_v003](https://github.com/user-attachments/assets/b36a00bd-170f-4e8b-8c6e-e683c167b24b)
 
 
 This repository provides a complete **AOV - Back to Beauty** workflow from Blender to Compositing in Nuke or Fusion:
