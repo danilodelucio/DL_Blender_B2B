@@ -1,4 +1,11 @@
-# DL_FileOutput_for_Blender
+![cover_v001](https://github.com/user-attachments/assets/f592f743-bdbe-4122-9ad5-758f04f99c62)
+
+
+This repository provides the full workflow from Blender to compositing in Nuke/Fusion:
+- DL_FileOutput for Blender to set the AOV names automatically;
+- AOVs Back to Beauty Templates for Nuke/Fusion;
+
+# DL_FileOutput
 This free addon creates a File Output node inside Blender and sets the AOV names (render passes), automatically.
 
 It was developed and tested in **Blender 4.1.0**.
@@ -24,9 +31,11 @@ For example:
 > _For now, this add-on has been designed to work only with Cycles and Eevee engines._
 
 
-<br><h1>Back to Beauty Templates for Nuke/Fusion ☢️</h1>
+<br>
 
-It includes Nuke AOV templates, which are custom setups for rebuilding the render passes within Nuke (also known as **Back to Beauty**).
+# Back to Beauty Templates for Nuke/Fusion ☢️
+
+It includes Nuke/Fusion AOV templates, which are custom setups for rebuilding the render passes (also known as **Back to Beauty**).
 
 - Blender_AOVs_BacktoBeauty_Standard_Cycles_v1;
 - Blender_AOVs_BacktoBeauty_Compact_Cycles_v1;
@@ -54,7 +63,7 @@ Once you download it, you can drag and drop the .nk/.setting files into your Nuk
 
 
 
-<br><h1>Installing ⚙️</h1>
+<br><h1>Installing DL_FileOutput ⚙️</h1>
 
 Click on the green button and download the zip file.
 
