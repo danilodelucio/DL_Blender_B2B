@@ -1,7 +1,7 @@
-![cover_v001](https://github.com/user-attachments/assets/f592f743-bdbe-4122-9ad5-758f04f99c62)
+![cover_v002](https://github.com/user-attachments/assets/50e5d971-9840-4395-8af6-5523221aa27a)
 
 
-This repository provides a complete AOV - Back to Beauty workflow from Blender to Compositing in Nuke or Fusion:
+This repository provides a complete **AOV - Back to Beauty** workflow from Blender to Compositing in Nuke or Fusion:
 - **DL_FileOutput** for Blender to set the AOV names automatically;
 - AOVs Back to Beauty Templates for Nuke/Fusion;
 
@@ -104,4 +104,7 @@ _If you donate any amount, please mention this tool (also your preference name i
 You can also share this tool or send me a positive message, it would help me in the same way.
 
 ---
+
+Thanks to Gustavo Goncalves, Marco Silva and Natan Manzano for testing this tool.
+
 <h1>Cheers! 🥂</h1>
