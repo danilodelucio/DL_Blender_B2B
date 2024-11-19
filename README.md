@@ -78,6 +78,10 @@ If you have feedback, suggestions, or feature requests, please visit the [Discus
 For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutput_for_Blender/issues) page and create a **New Issue**.
 <br>
 
+<br><h1>Supporters 💪</h1>
+
+- Marco Silva;
+
 <br><h1>Support me! 🥺</h1>
 
 ![image](https://github.com/user-attachments/assets/1268bd3e-07cd-40a0-980a-3543e4e35e78)
@@ -85,6 +89,8 @@ For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutp
 This personal project required significant time and extra hours of hard work to make it available to everyone. <br>
 
 If you find this tool useful, please consider supporting me on [Buy Me A Coffee](https://www.buymeacoffee.com/danilodelucio). ☕ <br>
+_If you donate any amount, please mention this tool (also your preference name if you want to), so your name will appear in the Supporters list above._
+
 You can also share this tool or send me a positive message, it would help me in the same way.
 
 ---
