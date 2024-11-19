@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------------
 #  DL_FileOutput [Blender]
-#  Version: v01.2
+#  Version: v01.3
 #  Author: Danilo de Lucio
 #  Website: www.danilodelucio.com
 #  Created Date: 31/Oct/2024
-#  Last update: 07/Nov/2024
+#  Last update: 19/Nov/2024
 # -----------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------
@@ -16,12 +16,12 @@
 bl_info = {
     "name": "DL_FileOutput",
     "author": "Danilo de Lucio",
-    "version": (1, 2),
+    "version": (1, 3),
     "blender": (4, 1, 0),
     "location": "Compositor > DL FileOutput",
     "description": "Creates an Output File node and sets all the AOV names automatically.",
     "warning": "",
-    "doc_url": "https://github.com/danilodelucio/DL_FileOutput_for_Blender",
+    "doc_url": "https://github.com/danilodelucio/DL_Blender_B2B",
     "category": "DL FileOutput",
 }
 
