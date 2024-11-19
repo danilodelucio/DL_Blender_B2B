@@ -1,8 +1,8 @@
 ![cover_v001](https://github.com/user-attachments/assets/f592f743-bdbe-4122-9ad5-758f04f99c62)
 
 
-This repository provides the full workflow from Blender to compositing in Nuke/Fusion:
-- DL_FileOutput for Blender to set the AOV names automatically;
+This repository provides a complete AOV - Back to Beauty workflow from Blender to Compositing in Nuke or Fusion:
+- **DL_FileOutput** for Blender to set the AOV names automatically;
 - AOVs Back to Beauty Templates for Nuke/Fusion;
 
 # DL_FileOutput
@@ -48,7 +48,8 @@ It includes Nuke/Fusion AOV templates, which are custom setups for rebuilding th
 ![Screenshot 2024-11-18 175012](https://github.com/user-attachments/assets/2d5da5fb-774d-4699-a9bb-13e606eebd95)
 
 <br>
-Once you download it, you can drag and drop the .nk/.setting files into your Nuke/Fusion. 
+
+Once you download it, you can drag and drop the **.nk**/**.setting** files into your Nuke/Fusion. 
 
 <br>![DragAndDrop_templates_v003_](https://github.com/user-attachments/assets/de296ec1-3c2a-42fb-bd1e-517253bbdf00)
 
