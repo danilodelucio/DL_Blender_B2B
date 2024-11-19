@@ -1,0 +1,492 @@
+{
+	Tools = ordered() {
+		diffuse_light = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "diffuse_light.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "diffuse_light.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "diffuse_light.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "diffuse_light.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2170.17, -526.392 } },
+		},
+		PipeRouter1 = PipeRouter {
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Input = Input {
+					SourceOp = "diffuse_light",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2170.17, -365.498 } },
+		},
+		Note1 = Note {
+			Inputs = {
+				Comments = Input { Value = "DIFFUSE", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2293.63, -618.171 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		ChannelBooleans1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Operation = Input { Value = 6, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "diffuse_albedo",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2390.41, -365.498 } },
+		},
+		reflection = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "reflection.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "reflection.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "reflection.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "reflection.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2368.61, 7.88251 } },
+		},
+		PipeRouter7_1 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "reflection",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2368.61, 149.92 } },
+		},
+		Note2_1_1 = Note {
+			Inputs = {
+				Comments = Input { Value = "REFLECTION", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2366.54, -72.0652 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		Note2_2_1 = Note {
+			Inputs = {
+				Comments = Input { Value = "REFRACTION", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2364.68, 291.248 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		refraction = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "refraction.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "refraction.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "refraction.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "refraction.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2368.61, 362.634 } },
+		},
+		diffuse_albedo = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "diffuse_albedo.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "diffuse_albedo.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "diffuse_albedo.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "diffuse_albedo.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2411.57, -527.048 } },
+		},
+		PipeRouter7 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "ChannelBooleans1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2390.41, -180.448 } },
+		},
+		PipeRouter7_1_1 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "refraction",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2368.61, 524.51 } },
+		},
+		volume = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "volume.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "volume.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "volume.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "volume.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2391.24, 689.154 } },
+		},
+		Note2_3_1 = Note {
+			Inputs = {
+				Comments = Input { Value = "VOLUME", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2388.2, 603.038 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		PipeRouter7_1_1_1 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "volume",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2391.24, 874.806 } },
+		},
+		env = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } }, },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "env.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "env.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "env.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "env.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2391.48, 1069.05 } },
+		},
+		emission = Loader {
+			Clips = {
+                Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "emission.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "emission.B" }, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "emission.R" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "emission.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2159.64, 1066.54 } },
+		},
+		Note2_4_1 = Note {
+			Inputs = {
+				Comments = Input { Value = "OTHERS", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2277.76, 963.47 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		ChannelBooleans2_1_1_1_1_1_1_2 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } }, },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "env",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter8",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2414.82, 1212.41 } },
+		},
+		PipeRouter8 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "emission",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2159.64, 1212.41 } },
+		},
+		PipeRouter7_1_1_1_1 = PipeRouter {
+			Inputs = {
+				Input = Input {
+					SourceOp = "ChannelBooleans2_1_1_1_1_1_1_2",
+					Source = "Output",
+				}
+			},
+			ViewInfo = PipeRouterInfo { Pos = { 2414.82, 1385.1 } },
+		},
+		ChannelBooleans2_1_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans2_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter7_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2738.35, 149.92 } },
+		},
+		none = BrightnessContrast {
+			NameSet = true,
+			Inputs = {
+				Gain = Input { Value = 0, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2736.39, -701.407 } },
+			Colors = { TileColor = { R = 0.266666666666667, G = 0.56078431372549, B = 0.396078431372549 }, }
+		},
+		alpha = Loader {
+			Clips = {
+				Clip {
+					ID = "Clip1",
+					Filename = "",
+					FormatID = "OpenEXRFormat",
+				}
+			},
+			NameSet = true,
+			Inputs = {
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				["Clip1.OpenEXRFormat.Channels"] = Input { Value = 1, },
+				["Clip1.OpenEXRFormat.RedName"] = Input { Value = FuID { "alpha.R" }, },
+				["Clip1.OpenEXRFormat.GreenName"] = Input { Value = FuID { "alpha.G" }, },
+				["Clip1.OpenEXRFormat.BlueName"] = Input { Value = FuID { "alpha.B" }, },
+				["Clip1.OpenEXRFormat.AlphaName"] = Input { Value = FuID { "alpha.A" }, }
+			},
+			ViewInfo = OperatorInfo { Pos = { 2686.78, 1465.39 } },
+		},
+		Note2_7_1 = Note {
+			Inputs = {
+				Comments = Input { Value = "CG RENDER", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2734.83, -833.948 },
+				Size = { 86.6666, 35.243 }
+			},
+		},
+		ChannelBooleans2_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } }, },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "none",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter7",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2760.15, -180.448 } },
+		},
+		ChannelBooleans2_1_1_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans2_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter7_1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2761.68, 524.51 } },
+		},
+		ChannelBooleans2_1_1_1_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans2_1_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter7_1_1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2788.08, 874.806 } },
+		},
+		Note1_1 = Note {
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Comments = Input { Value = "If you have rendered with transparency background in Blender, please disable the \"env\" pass.\n\n- Danilo de Lucio\n\nv1", }
+			},
+			ViewInfo = StickyNoteInfo {
+				Pos = { 2046.01, 1886.18 },
+				Flags = {
+					Expanded = true
+				},
+				Size = { 433.006, 82.2702 }
+			},
+		},
+		ChannelBooleans2_1_1_1_1_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				Operation = Input { Value = 1, },
+				ToAlpha = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans2_1_1_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "PipeRouter7_1_1_1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2811.65, 1385.1 } },
+		},
+		Gamut = GamutConvert {
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = {
+				OutputSpace = Input { Value = FuID { "sRGB" }, },
+				Input = Input {
+					SourceOp = "AlphaMultiply",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2833.65, 1761.42 } },
+		},
+		AlphaMultiply = AlphaMultiply {
+			Inputs = {
+				Input = Input {
+					SourceOp = "ChannelBooleans6_1_1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2833.65, 1690.76 } },
+		},
+		ChannelBooleans6_1_1_1 = ChannelBoolean {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } }, },
+			Inputs = {
+				ToRed = Input { Value = 4, },
+				ToGreen = Input { Value = 4, },
+				ToBlue = Input { Value = 4, },
+				Background = Input {
+					SourceOp = "ChannelBooleans2_1_1_1_1_1_1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "alpha",
+					Source = "Output",
+				}
+			},
+			ViewInfo = OperatorInfo { Pos = { 2833.65, 1465.39 } },
+		},
+		FINAL_RESULT = MacroOperator {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } } },
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "AlphaDivide1_1_1",
+					Source = "Input",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "AlphaDivide1_1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 2833.65, 1856.29 } },
+			Tools = ordered() {
+				AlphaDivide1_1_1 = AlphaDivide {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0, },
+						Input = Input {
+							SourceOp = "Gamut",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 8.75758 } },
+				}
+			},
+		},
+		Blender_AOVs_BackToBeauty_Compact_Setup_CYCLES = Underlay {
+			NameSet = true,
+			CustomData = { Path = { Map = { ["Setting:"] = "" } }, },
+			ViewInfo = UnderlayInfo {
+				Pos = { 2530.71, -997.287 },
+				Size = { 1206.7, 3035.68 }
+			},
+			Colors = { TileColor = { R = 0.584313725490196, G = 0.294117647058824, B = 0.803921568627451 }, }
+		}
+	}
+}
