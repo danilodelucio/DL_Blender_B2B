@@ -99,7 +99,7 @@ For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutp
 This personal project required significant time and extra hours of hard work to make it available to everyone. <br>
 
 If you find this tool useful, please consider supporting me on [Buy Me A Coffee](https://www.buymeacoffee.com/danilodelucio). ☕ <br>
-_If you donate any amount, please mention this tool (also your preference name if you want to), so your name will appear in the Supporters list above._
+> _If you donate any amount, please mention this tool (also your preference name if you want to), so your name will appear in the Supporters list above._
 
 You can also share this tool or send me a positive message, it would help me in the same way.
 
