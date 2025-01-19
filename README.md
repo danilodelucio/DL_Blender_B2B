@@ -91,6 +91,7 @@ For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutp
 <br><h1>Supporters 💪</h1>
 
 - Marco Silva;
+- Samuel Mourão;
 
 <br><h1>Support me! 🥺</h1>
 
