@@ -79,8 +79,7 @@ Now you should see the Addon in the Compositor editor.
 
 ![Screenshot 2024-11-06 183122](https://github.com/user-attachments/assets/b31311f9-b184-4ccb-9371-23c387245147)
 
-
-<br><h1>Troubleshooting 🛠️</h1>
+<h1>Troubleshooting 🛠️</h1>
 
 <br>
 
@@ -88,20 +87,12 @@ If you have feedback, suggestions, or feature requests, please visit the [Discus
 For bugs, please go to the [Issues](https://github.com/danilodelucio/DL_FileOutput_for_Blender/issues) page and create a **New Issue**.
 <br>
 
-<br><h1>Supporters 💪</h1>
-Samuel Mourão | ☕☕☕☕☕☕☕☕☕☕
---- | ---
-Marco Silva | ☕☕☕☕☕
+# Support me! ☕
 
+![Supporters Page](https://danilodelucio.com/wp-content/uploads/2025/12/supporter-badges.jpg)
 
-<br><h1>Support me! 🥺</h1>
-
-![image](https://github.com/user-attachments/assets/1268bd3e-07cd-40a0-980a-3543e4e35e78)
-
-This personal project required significant time and extra hours of hard work to make it available to everyone. <br>
-
-If you find this tool useful, please consider supporting me on [Buy Me A Coffee](https://www.buymeacoffee.com/danilodelucio). ☕ <br>
-> _If you donate any amount, please mention this tool (also your preference name if you want to), so your name will appear in the Supporters list above._
+## Enjoying this tool?
+Support me with a coffee on my [Supporters](https://www.danilodelucio.com/supporters) page — get a badge and join the wall of supporters! 😎
 
 You can also ⭐ _star this repository_ ⭐ — it helps a lot with visibility and motivates me to keep developing tools for VFX.
 
